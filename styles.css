@@ -4,3 +4,15 @@
     font-size: 35px;
     color: royalblue;
 }
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+ .newstyle {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border: 1px solid black;
+ }
