@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 #first {
     display: flex;
     justify-content: center;
@@ -6,13 +10,15 @@
 }
 
 #container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(16, auto);
+    grid-template-rows: repeat(16, auto);
     justify-content: center;
+    align-items: center;
 }
 
- .newstyle {
-    height: 50px;
-    width: 50px;
-    background-color: white;
-    border: 1px solid black;
- }
+.grid-item {
+    height: 10px;
+    width: 10px;
+    border: 2px solid black;  
+}
