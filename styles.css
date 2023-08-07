@@ -18,7 +18,12 @@
 }
 
 .grid-item {
-    height: 10px;
-    width: 10px;
-    border: 2px solid black;  
+    height: 25px;
+    width: 25px;
+    border: 1px solid black;  
+}
+
+.grid-item:hover {
+    background-color: blue;
+    cursor: pointer;
 }
