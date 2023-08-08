@@ -26,3 +26,17 @@
 .grid-item:hover {
     cursor: pointer;
 }
+
+#resetbtn {
+    background-color: royalblue;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+}
+
+#btncontainer {
+    display: flex;
+    justify-content: center;
+}
