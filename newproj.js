@@ -43,5 +43,9 @@ newbutton.addEventListener("click", () => {
     }
 )});
 
-
+//Choose Number of Squares//
+let numberButton = document.getElementById("sqrnumber");
+numberButton.addEventListener("click", () => {
+    window.prompt("How Many Sqaures Would You Like?");
+})
 
