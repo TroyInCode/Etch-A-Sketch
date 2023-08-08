@@ -46,6 +46,8 @@ newbutton.addEventListener("click", () => {
 //Choose Number of Squares//
 let numberButton = document.getElementById("sqrnumber");
 numberButton.addEventListener("click", () => {
-    window.prompt("How Many Sqaures Would You Like?");
+    let enterNumber;
+    while (isNaN(enterNumber) || enterNumber > 100 || enterNumber < 0) {
+        enterNumber = Number(window.prompt("How Many Sqaures Would You Like?"));
+    }
 })
-
