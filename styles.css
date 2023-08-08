@@ -27,7 +27,7 @@
     cursor: pointer;
 }
 
-#resetbtn {
+.resetbtn {
     background-color: royalblue;
     border: none;
     border-radius: 12px;

@@ -1,6 +1,7 @@
 //Container for Div Squares//
 const container = document.getElementById("container");
 let title = document.getElementById("first");
+buttoncontain = document.getElementById("btncontainer");
 
 //Creates 16x16 Div Grid Sqaures//
 function addSquares(squareNum) {
@@ -30,9 +31,17 @@ square.addEventListener("mouseout", () => {
 });
 
 //Add Reset Button to Screen//
-let newbutton = document.getElementById("resetbtn");
+let newbutton = document.createElement("button");
+newbutton.classList.add("resetbtn");
+newbutton.textContent = "Reset";
+buttoncontain.appendChild(newbutton)
 
 //Event Listener for Reset Button//
+newbutton.addEventListener("click", () => {
+    allSquares.forEach((square) => {
+        square.style.backgroundColor = "white";
+    }
+)});
 
 
 
