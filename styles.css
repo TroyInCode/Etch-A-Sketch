@@ -32,11 +32,20 @@
     border: none;
     border-radius: 12px;
     color: white;
-    padding: 20px;
+    padding: 15px;
     cursor: pointer;
 }
 
 #btncontainer {
     display: flex;
     justify-content: center;
+    gap: 45px;
+}
+
+#sqrnumber {
+    border: none;
+    border-radius: 12px;
+    background-color: #ed1821;
+    color: #ffffff;
+    padding: 15px;
 }
