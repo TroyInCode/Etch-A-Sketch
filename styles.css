@@ -24,6 +24,5 @@
 }
 
 .grid-item:hover {
-    background-color: blue;
     cursor: pointer;
 }
