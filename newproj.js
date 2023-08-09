@@ -13,28 +13,27 @@ function addSquares(squareNum) {
     }
 }
 
-addSquares(256);
 
-//Find All Elements With grid-item Class//
-const allSquares = document.querySelectorAll(".grid-item");
-
-//Event Listeners to Change Colors//
-allSquares.forEach((square) => {
-    square.addEventListener("mouseover", () => {
-        square.style.backgroundColor = "blue";
-    });
-
-square.addEventListener("mouseout", () => {
-    square.style.backgroundColor = " ";
-});
-
-});
 
 //Add Reset Button to Screen//
 let newbutton = document.createElement("button");
 newbutton.classList.add("resetbtn");
 newbutton.textContent = "Reset";
 buttoncontain.appendChild(newbutton)
+
+//Event Listeners to Change Colors//
+function changeSquareColor () {
+const allSquares = document.querySelectorAll(".grid-item");
+allSquares.forEach((block) => {
+    block.addEventListener("mouseover", () => {
+        block.style.backgroundColor = "blue";
+    });
+
+block.addEventListener("mouseout", () => {
+    block.style.backgroundColor = " ";
+});
+
+});
 
 //Event Listener for Reset Button//
 newbutton.addEventListener("click", () => {
@@ -43,11 +42,27 @@ newbutton.addEventListener("click", () => {
     }
 )});
 
+}
+
+addSquares(256);
+changeSquareColor();
+
+
+
+
 //Choose Number of Squares//
 let numberButton = document.getElementById("sqrnumber");
 numberButton.addEventListener("click", () => {
     let enterNumber;
     while (isNaN(enterNumber) || enterNumber > 100 || enterNumber < 0) {
-        enterNumber = Number(window.prompt("How Many Sqaures Would You Like?"));
+        enterNumber = Number(window.prompt("Choose A Number between 0 -100"));
     }
+
+    //Clear Squares
+    container.innerHTML = "";
+    addSquares(enterNumber * enterNumber);
+    container.style.gridTemplateColumns = `repeat(${enterNumber}, auto);`;
+    container.style.gridTemplateRows = `repeat(${enterNumber}, auto);`;
+    changeSquareColor();
+    
 })
