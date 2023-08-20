@@ -3,15 +3,24 @@ const container = document.getElementById("container");
 let title = document.getElementById("first");
 buttoncontain = document.getElementById("btncontainer");
 
+
+
 //Creates 16x16 Div Grid Sqaures//
 function addSquares(squareNum) {
-    for (i = 0; i < squareNum; i++) {
+    const squareSize = 500/squareNum; //Calculates size of each square
+    const totalSquares = squareNum*squareNum;
+    for (i = 0; i < totalSquares; i++) {
+        Math.floor(squareSize);
         let square = document.createElement("div");
         square.classList.add("grid-item");
+        square.style.width = `${squareSize}px`;
+        square.style.height = `${squareSize}px`;
         container.appendChild(square);
-
     }
 }
+
+
+
 
 
 
@@ -39,12 +48,12 @@ block.addEventListener("mouseout", () => {
 newbutton.addEventListener("click", () => {
     allSquares.forEach((square) => {
         square.style.backgroundColor = "white";
-    }
-)});
+    });
+});
 
 }
 
-addSquares(256);
+addSquares(16);
 changeSquareColor();
 
 
@@ -58,11 +67,10 @@ numberButton.addEventListener("click", () => {
         enterNumber = Number(window.prompt("Choose A Number between 0 -100"));
     }
 
+
     //Clear Squares
     container.innerHTML = "";
-    addSquares(enterNumber * enterNumber);
-    container.style.gridTemplateColumns = `repeat(${enterNumber}, auto);`;
-    container.style.gridTemplateRows = `repeat(${enterNumber}, auto);`;
+    addSquares(enterNumber);
     changeSquareColor();
     
-})
+});
